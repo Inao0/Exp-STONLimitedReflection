@@ -8,7 +8,7 @@ Class {
 }
 
 { #category : #accessing }
-WhiteListPlugIn >> selectorBlackList [
+WhiteListPlugIn class >> selectorBlackList [
 
 	^ { #className. #classSide. #instanceSide. #isClassSide. #isInstanceSide.
 	  #isMetaclassOfClassOrNil. #hasClassSide. #isClass. #isMeta. #subclasses.
@@ -102,6 +102,11 @@ WhiteListPlugIn >> selectorBlackList [
 	  #argument. #arguments. #hasArguments. #numArgs. #selector. #lookupClass.
 	  #argument:. #lookupClass:. #setSelector:. #setSelector:arguments:.
 	  #asSendTo:. #sends:. #sentTo:. #sendTo:. #thisContext } asSet
+]
+
+{ #category : #accessing }
+WhiteListPlugIn >> selectorBlackList [
+	^ self class selectorBlackList
 ]
 
 { #category : #'private - transforming' }

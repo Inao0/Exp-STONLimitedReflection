@@ -1,10 +1,10 @@
 Class {
 	#name : #ManifestMySTONPackage,
 	#superclass : #ManifestWithReflectiveWhiteList,
-	#category : #'MySTONWithLimitedReflection-Manifest'
+	#category : #MySTONWithLimitedReflection
 }
 
 { #category : #deprecation }
-ManifestMySTONPackage class >> requiredSelectors [
+ManifestMySTONPackage class >> defaultWhiteList [ 
 	^  {#instVarNamed: . #lookupClass:}
 ]
