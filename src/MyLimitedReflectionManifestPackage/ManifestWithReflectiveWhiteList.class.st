@@ -8,6 +8,22 @@ Class {
 }
 
 { #category : #deprecation }
+ManifestWithReflectiveWhiteList class >> classCompiler [
+
+	^ super classCompiler
+		  addPlugin: (WhiteListPlugIn new whiteList: self requiredSelectors);
+		  yourself
+]
+
+{ #category : #deprecation }
+ManifestWithReflectiveWhiteList class >> classSideCompiler [
+
+	^ super classSideCompiler 
+		  addPlugin: (WhiteListPlugIn new whiteList: self requiredSelectors);
+		  yourself
+]
+
+{ #category : #deprecation }
 ManifestWithReflectiveWhiteList class >> compiler [
 
 	^ super compiler
